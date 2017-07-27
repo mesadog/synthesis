@@ -123,16 +123,6 @@ namespace InvAddIn {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap AddSpawnLocation16 {
-            get {
-                object obj = ResourceManager.GetObject("AddSpawnLocation16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap AddSpawnLocation32 {
             get {
                 object obj = ResourceManager.GetObject("AddSpawnLocation32", resourceCulture);
@@ -196,16 +186,6 @@ namespace InvAddIn {
         internal static System.Drawing.Bitmap ExportField32 {
             get {
                 object obj = ResourceManager.GetObject("ExportField32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Pointer {
-            get {
-                object obj = ResourceManager.GetObject("Pointer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,116 +286,6 @@ namespace InvAddIn {
         internal static System.Drawing.Bitmap StartExporter32 {
             get {
                 object obj = ResourceManager.GetObject("StartExporter32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TTAddAssembly {
-            get {
-                object obj = ResourceManager.GetObject("TTAddAssembly", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TTAddNewComponent {
-            get {
-                object obj = ResourceManager.GetObject("TTAddNewComponent", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TTAddPart {
-            get {
-                object obj = ResourceManager.GetObject("TTAddPart", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TTAddSpawnLocation {
-            get {
-                object obj = ResourceManager.GetObject("TTAddSpawnLocation", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TTComponentProperties {
-            get {
-                object obj = ResourceManager.GetObject("TTComponentProperties", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TTEditSpawnLocation {
-            get {
-                object obj = ResourceManager.GetObject("TTEditSpawnLocation", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TTExportField {
-            get {
-                object obj = ResourceManager.GetObject("TTExportField", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TTRemoveAssembly {
-            get {
-                object obj = ResourceManager.GetObject("TTRemoveAssembly", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TTRemoveComponent {
-            get {
-                object obj = ResourceManager.GetObject("TTRemoveComponent", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TTRemovePart {
-            get {
-                object obj = ResourceManager.GetObject("TTRemovePart", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TTRemoveSpawnPoint {
-            get {
-                object obj = ResourceManager.GetObject("TTRemoveSpawnPoint", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

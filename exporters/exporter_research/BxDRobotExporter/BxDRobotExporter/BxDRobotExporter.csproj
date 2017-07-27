@@ -31,7 +31,8 @@
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\..\..\..\..\..\..\Program Files\Autodesk\Inventor 2018\Bin\BxDRobotExporter\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\..\..\..\..\Program Files\Autodesk\Inventor 2018\Bin\BxDRobotExporter\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -114,11 +115,11 @@
     <Compile Include="EditLimits.Designer.cs">
       <DependentUpon>EditLimits.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="propertyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="propertyForm.Designer.cs">
+      <DependentUpon>propertyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="JointResolver.cs" />
     <Compile Include="PictureDispConverter.cs" />
@@ -134,12 +135,6 @@
     <Compile Include="STLData.cs" />
     <Compile Include="TempReader.cs" />
     <Compile Include="TempWriter.cs" />
-    <Compile Include="UserControl1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="BxDRobotExporter.X.manifest" />
@@ -151,20 +146,16 @@
     <EmbeddedResource Include="EditLimits.resx">
       <DependentUpon>EditLimits.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="propertyForm.resx">
+      <DependentUpon>propertyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AddSlotOption.bmp" />
-    <Content Include="AddSlotOption.ico" />
+    <Content Include="Images\AddSlotOption.ico" />
     <Content Include="Autodesk.BxDRobotExporter.Inventor.addin" />
     <Content Include="Images\EditDrivers16.bmp" />
     <Content Include="Images\EditDrivers32.bmp" />

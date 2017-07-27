@@ -47,7 +47,7 @@ namespace BxDRobotExporter {
             }
         }
         // reads the data from jointdata and put the fields to the correct value
-        public void readFromData(JointData j)
+        public void ReadFromData(JointData j)
         {
             joint = j;
             txtLower.Text = j.LowerLim.ToString();

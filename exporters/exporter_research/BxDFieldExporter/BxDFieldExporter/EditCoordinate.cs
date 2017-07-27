@@ -2,7 +2,8 @@
 using System.Windows.Forms;
 using Inventor;
 
-namespace BxDFieldExporter {
+namespace BxDFieldExporter
+{
     public partial class EditCoordinate : Form
     {
         UserCoordinateSystem UCS;
@@ -26,7 +27,7 @@ namespace BxDFieldExporter {
             }
             catch (Exception)
             {
-                if (textBoxX.Text.Length > 0 && ! textBoxX.Text.Equals("-"))
+                if (textBoxX.Text.Length > 0 && !textBoxX.Text.Equals("-"))
                 {
                     MessageBox.Show("warning, incorrect input");
                 }
@@ -44,7 +45,7 @@ namespace BxDFieldExporter {
             }
             catch (Exception)
             {
-                if (textBoxY.Text.Length > 0 && ! textBoxY.Text.Equals("-"))
+                if (textBoxY.Text.Length > 0 && !textBoxY.Text.Equals("-"))
                 {
                     MessageBox.Show("warning, incorrect input");
                 }
@@ -62,7 +63,7 @@ namespace BxDFieldExporter {
             }
             catch (Exception)
             {
-                if (textBoxZ.Text.Length > 0 && ! textBoxZ.Text.Equals("-"))
+                if (textBoxZ.Text.Length > 0 && !textBoxZ.Text.Equals("-"))
                 {
                     MessageBox.Show("warning, incorrect input");
                 }

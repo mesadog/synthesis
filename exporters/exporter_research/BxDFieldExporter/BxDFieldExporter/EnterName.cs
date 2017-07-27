@@ -32,9 +32,10 @@ namespace BxDFieldExporter {
         }
         private void OKButton_OnClick(object sender, EventArgs e) {
             name = nameTextBox.Text;
+            StandardAddInServer.AddComponent(name);
             this.Close();
             this.Dispose(true);
-            StandardAddInServer.addComponent(name);
+            
         }
         private void CancleButton_OnClick(object sender, EventArgs e) {
             this.Dispose(true);

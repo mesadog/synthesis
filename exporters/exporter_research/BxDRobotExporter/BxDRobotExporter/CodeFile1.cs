@@ -6,9 +6,9 @@ namespace InventorAddInBasicGUI2 {
     /// that all Inventor AddIns are required to implement. The communication between Inventor and
     /// the AddIn is via the methods on this interface.
     /// </summary>
-    public class hackDemJoints : AssemblyJoint
+    public class HackDemJoints //: AssemblyJoint
     {
-        AssemblyJoint joint;
+    /*    AssemblyJoint joint;
         public ComponentOccurrence AffectedOccurrenceOne
         {
             get
@@ -175,7 +175,7 @@ namespace InventorAddInBasicGUI2 {
         public void GetReferenceKey(ref byte[] ReferenceKey, int KeyContext = 0)
         {
             throw new NotImplementedException();
-        }
+        }*/
     }
 
 }

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace BxDRobotExporter
 {
-    partial class Form1
+    partial class PropertyForm
     {
         /// <summary>
         /// Required designer variable.
@@ -145,7 +145,7 @@ namespace BxDRobotExporter
             this.rbPWM.TabStop = true;
             this.rbPWM.Text = "PWM";
             this.rbPWM.UseVisualStyleBackColor = true;
-            this.rbPWM.Click += new System.EventHandler(this.btnPWM_Click);
+            this.rbPWM.Click += new System.EventHandler(this.BtnPWM_Click);
             // 
             // rbCAN
             // 
@@ -157,7 +157,7 @@ namespace BxDRobotExporter
             this.rbCAN.TabStop = true;
             this.rbCAN.Text = "CAN";
             this.rbCAN.UseVisualStyleBackColor = true;
-            this.rbCAN.Click += new System.EventHandler(this.btnCAN_Click);
+            this.rbCAN.Click += new System.EventHandler(this.BtnCAN_Click);
             // 
             // chkBoxDriveWheel
             // 
@@ -310,7 +310,7 @@ namespace BxDRobotExporter
             this.cmbWheelType.Size = new System.Drawing.Size(120, 24);
             this.cmbWheelType.TabIndex = 7;
             this.cmbWheelType.SelectedIndex = 0;
-            this.cmbWheelType.SelectedIndexChanged += new System.EventHandler(driveWheelChoice);
+            this.cmbWheelType.SelectedIndexChanged += new System.EventHandler(DriveWheelChoice);
             // 
             // cmbPneumaticPressure
             // 
@@ -372,7 +372,7 @@ namespace BxDRobotExporter
             this.chkBoxHasJointFriction.TabIndex = 10;
             this.chkBoxHasJointFriction.Text = "Has Joint Limits";
             this.chkBoxHasJointFriction.UseVisualStyleBackColor = true;
-            this.chkBoxHasJointFriction.Click += new System.EventHandler(btnHasJointFriction_Click);
+            this.chkBoxHasJointFriction.Click += new System.EventHandler(BtnHasJointFriction_Click);
             // 
             // JointFrictionLevel
             // 
@@ -570,7 +570,7 @@ namespace BxDRobotExporter
             this.chkBoxHasBrake.TabIndex = 0;
             this.chkBoxHasBrake.Text = "Has Brake";
             this.chkBoxHasBrake.UseVisualStyleBackColor = true;
-            this.chkBoxHasBrake.Click += new System.EventHandler(btnHasBrake_Click);
+            this.chkBoxHasBrake.Click += new System.EventHandler(BtnHasBrake_Click);
             // 
             // metaElevatorStages
             // 
@@ -598,7 +598,7 @@ namespace BxDRobotExporter
             this.cmbStages.TabIndex = 0;
             this.cmbStages.SelectedIndexChanged += new System.EventHandler(StagesChanged);
             // 
-            // Form1
+            // propertyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -608,7 +608,7 @@ namespace BxDRobotExporter
             this.Controls.Add(this.grpDriveOptions);
             this.Controls.Add(this.grpChooseDriver);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Form1";
+            this.Name = "propertyForm";
             this.Text = "Configure Joint";
             this.grpChooseDriver.ResumeLayout(false);
             this.grpDriveOptions.ResumeLayout(false);

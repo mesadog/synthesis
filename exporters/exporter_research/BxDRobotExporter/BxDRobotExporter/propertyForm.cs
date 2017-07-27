@@ -2,11 +2,11 @@
 using System.Windows.Forms;
 
 namespace BxDRobotExporter {
-    public partial class Form1 : Form {
+    public partial class PropertyForm : Form {
 
         JointData joint;
         bool twoChoices;
-        public Form1() {
+        public PropertyForm() {
             InitializeComponent();
         }
         public void MotorChosen() {
@@ -237,7 +237,7 @@ namespace BxDRobotExporter {
         public void SaveButtonPressed(object sender, EventArgs e) {
             this.Close();
         }
-        public void btnPWM_Click(object sender, EventArgs e) {
+        public void BtnPWM_Click(object sender, EventArgs e) {
             lblPort.Text = "PWM Port";
             joint.PWM = true;
             if (!twoChoices) {
@@ -254,7 +254,7 @@ namespace BxDRobotExporter {
 
             }
         }
-        public void btnHasBrake_Click(object sender, EventArgs e) {
+        public void BtnHasBrake_Click(object sender, EventArgs e) {
             if (chkBoxHasBrake.Checked == true) {
                 brakePortB.Enabled = true;
                 brakePortA.Enabled = true;
@@ -266,7 +266,7 @@ namespace BxDRobotExporter {
                 joint.HasBrake = false;
             }
         }
-        public void btnCAN_Click(object sender, EventArgs e) {
+        public void BtnCAN_Click(object sender, EventArgs e) {
             lblPort.Text = "CAN Port";
             joint.PWM = false;
             if (!twoChoices) {
@@ -282,7 +282,7 @@ namespace BxDRobotExporter {
 
             }
         }
-        public void driveWheelChoice(object sender, EventArgs e) {
+        public void DriveWheelChoice(object sender, EventArgs e) {
 
             if (cmbWheelType.SelectedIndex == 1) {
                 joint.Wheel = WheelType.Normal;
@@ -401,7 +401,7 @@ namespace BxDRobotExporter {
                 }
             }
         }
-        public void btnHasJointFriction_Click(object sender, EventArgs e) {
+        public void BtnHasJointFriction_Click(object sender, EventArgs e) {
             if (chkBoxHasJointFriction.Checked == true) {
                 JointFrictionLevel.Enabled = true;
                 joint.HasJointFriction = true;
@@ -421,7 +421,7 @@ namespace BxDRobotExporter {
                 }
             }
         }
-        public void readFromData(JointData j) {
+        public void ReadFromData(JointData j) {
             try {
                 joint = j;
                 if (j.Wheel == WheelType.Normal) {

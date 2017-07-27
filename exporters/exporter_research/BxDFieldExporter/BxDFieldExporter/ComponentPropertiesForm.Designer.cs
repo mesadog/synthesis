@@ -1,6 +1,8 @@
 ﻿
-namespace BxDFieldExporter {
-    partial class ComponentPropertiesForm {
+namespace BxDFieldExporter
+{
+    partial class ComponentPropertiesForm
+    {
         /// <summary> 
         /// Required designer variable.
         /// </summary>
@@ -10,8 +12,10 @@ namespace BxDFieldExporter {
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -23,7 +27,8 @@ namespace BxDFieldExporter {
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             this.physicalPropertiesGroupBox = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.frictionLabelsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -66,7 +71,7 @@ namespace BxDFieldExporter {
             this.physicalPropertiesGroupBox.Controls.Add(this.frictionTrackBar);
             this.physicalPropertiesGroupBox.Controls.Add(this.dynamicGroupBox);
             this.physicalPropertiesGroupBox.Controls.Add(this.frictionLabel);
-            this.physicalPropertiesGroupBox.Location = new System.Drawing.Point(3, 60);
+            this.physicalPropertiesGroupBox.Location = new System.Drawing.Point(3, 55);
             this.physicalPropertiesGroupBox.Name = "physicalPropertiesGroupBox";
             this.physicalPropertiesGroupBox.Size = new System.Drawing.Size(290, 182);
             this.physicalPropertiesGroupBox.TabIndex = 15;
@@ -85,7 +90,7 @@ namespace BxDFieldExporter {
             // 
             // frictionLabelsLayoutPanel
             // 
-            this.frictionLabelsLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.frictionLabelsLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.frictionLabelsLayoutPanel.ColumnCount = 3;
             this.frictionLabelsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -132,12 +137,12 @@ namespace BxDFieldExporter {
             // 
             // dynamicCheckBox
             // 
-            this.dynamicCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dynamicCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dynamicCheckBox.AutoSize = true;
             this.dynamicCheckBox.Location = new System.Drawing.Point(12, 82);
             this.dynamicCheckBox.Name = "dynamicCheckBox";
-            this.dynamicCheckBox.Size = new System.Drawing.Size(84, 21);
+            this.dynamicCheckBox.Size = new System.Drawing.Size(77, 19);
             this.dynamicCheckBox.TabIndex = 8;
             this.dynamicCheckBox.Text = "Dynamic";
             this.dynamicCheckBox.UseVisualStyleBackColor = true;
@@ -145,7 +150,7 @@ namespace BxDFieldExporter {
             // 
             // frictionTrackBar
             // 
-            this.frictionTrackBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.frictionTrackBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.frictionTrackBar.Location = new System.Drawing.Point(70, 21);
             this.frictionTrackBar.Maximum = 100;
@@ -158,7 +163,7 @@ namespace BxDFieldExporter {
             // 
             // dynamicGroupBox
             // 
-            this.dynamicGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dynamicGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dynamicGroupBox.Controls.Add(this.comboBox1);
             this.dynamicGroupBox.Controls.Add(this.massNumericUpDown);
@@ -178,13 +183,13 @@ namespace BxDFieldExporter {
             "lbs"});
             this.comboBox1.Location = new System.Drawing.Point(219, 20);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(53, 24);
+            this.comboBox1.Size = new System.Drawing.Size(53, 21);
             this.comboBox1.TabIndex = 11;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // massNumericUpDown
             // 
-            this.massNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.massNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.massNumericUpDown.DecimalPlaces = 2;
             this.massNumericUpDown.Location = new System.Drawing.Point(89, 21);
@@ -194,7 +199,7 @@ namespace BxDFieldExporter {
             0,
             0});
             this.massNumericUpDown.Name = "massNumericUpDown";
-            this.massNumericUpDown.Size = new System.Drawing.Size(124, 22);
+            this.massNumericUpDown.Size = new System.Drawing.Size(124, 20);
             this.massNumericUpDown.TabIndex = 10;
             this.massNumericUpDown.ValueChanged += new System.EventHandler(this.MassChanged);
             // 
@@ -203,7 +208,7 @@ namespace BxDFieldExporter {
             this.massLabel.AutoSize = true;
             this.massLabel.Location = new System.Drawing.Point(6, 24);
             this.massLabel.Name = "massLabel";
-            this.massLabel.Size = new System.Drawing.Size(77, 17);
+            this.massLabel.Size = new System.Drawing.Size(67, 15);
             this.massLabel.TabIndex = 9;
             this.massLabel.Text = "Mass (lbs):";
             // 
@@ -212,7 +217,7 @@ namespace BxDFieldExporter {
             this.frictionLabel.AutoSize = true;
             this.frictionLabel.Location = new System.Drawing.Point(6, 18);
             this.frictionLabel.Name = "frictionLabel";
-            this.frictionLabel.Size = new System.Drawing.Size(58, 34);
+            this.frictionLabel.Size = new System.Drawing.Size(50, 30);
             this.frictionLabel.TabIndex = 3;
             this.frictionLabel.Text = "Friction:\r\n50/100";
             // 
@@ -224,7 +229,7 @@ namespace BxDFieldExporter {
             this.meshPropertiesGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.meshPropertiesGroupBox.Location = new System.Drawing.Point(3, 3);
             this.meshPropertiesGroupBox.Name = "meshPropertiesGroupBox";
-            this.meshPropertiesGroupBox.Size = new System.Drawing.Size(327, 51);
+            this.meshPropertiesGroupBox.Size = new System.Drawing.Size(327, 46);
             this.meshPropertiesGroupBox.TabIndex = 17;
             this.meshPropertiesGroupBox.TabStop = false;
             this.meshPropertiesGroupBox.Text = "Mesh Properties";
@@ -236,13 +241,13 @@ namespace BxDFieldExporter {
             this.meshPropertiesTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.meshPropertiesTable.Controls.Add(this.colliderTypePanel, 0, 0);
             this.meshPropertiesTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.meshPropertiesTable.Location = new System.Drawing.Point(3, 18);
+            this.meshPropertiesTable.Location = new System.Drawing.Point(3, 16);
             this.meshPropertiesTable.Margin = new System.Windows.Forms.Padding(0);
             this.meshPropertiesTable.Name = "meshPropertiesTable";
             this.meshPropertiesTable.RowCount = 2;
             this.meshPropertiesTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.meshPropertiesTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.meshPropertiesTable.Size = new System.Drawing.Size(321, 30);
+            this.meshPropertiesTable.Size = new System.Drawing.Size(321, 27);
             this.meshPropertiesTable.TabIndex = 2;
             // 
             // colliderTypePanel
@@ -254,7 +259,7 @@ namespace BxDFieldExporter {
             this.colliderTypePanel.Location = new System.Drawing.Point(0, 0);
             this.colliderTypePanel.Margin = new System.Windows.Forms.Padding(0);
             this.colliderTypePanel.Name = "colliderTypePanel";
-            this.colliderTypePanel.Size = new System.Drawing.Size(321, 30);
+            this.colliderTypePanel.Size = new System.Drawing.Size(321, 27);
             this.colliderTypePanel.TabIndex = 0;
             // 
             // colliderTypeLabel
@@ -262,13 +267,13 @@ namespace BxDFieldExporter {
             this.colliderTypeLabel.AutoSize = true;
             this.colliderTypeLabel.Location = new System.Drawing.Point(3, 6);
             this.colliderTypeLabel.Name = "colliderTypeLabel";
-            this.colliderTypeLabel.Size = new System.Drawing.Size(95, 17);
+            this.colliderTypeLabel.Size = new System.Drawing.Size(81, 15);
             this.colliderTypeLabel.TabIndex = 1;
             this.colliderTypeLabel.Text = "Collider Type:";
             // 
             // colliderTypeCombobox
             // 
-            this.colliderTypeCombobox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.colliderTypeCombobox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.colliderTypeCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.colliderTypeCombobox.Items.AddRange(new object[] {
@@ -277,7 +282,7 @@ namespace BxDFieldExporter {
             "Mesh"});
             this.colliderTypeCombobox.Location = new System.Drawing.Point(104, 3);
             this.colliderTypeCombobox.Name = "colliderTypeCombobox";
-            this.colliderTypeCombobox.Size = new System.Drawing.Size(183, 24);
+            this.colliderTypeCombobox.Size = new System.Drawing.Size(183, 21);
             this.colliderTypeCombobox.TabIndex = 0;
             this.colliderTypeCombobox.SelectedIndexChanged += new System.EventHandler(this.colliderTypeCombobox_SelectedIndexChanged);
             // 
@@ -297,7 +302,7 @@ namespace BxDFieldExporter {
             // 
             // propertiesLayoutPanel
             // 
-            this.propertiesLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.propertiesLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.propertiesLayoutPanel.AutoSize = true;
             this.propertiesLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -311,7 +316,7 @@ namespace BxDFieldExporter {
             this.propertiesLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.propertiesLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.propertiesLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.propertiesLayoutPanel.Size = new System.Drawing.Size(333, 245);
+            this.propertiesLayoutPanel.Size = new System.Drawing.Size(333, 240);
             this.propertiesLayoutPanel.TabIndex = 18;
             // 
             // propertiesScrollablePanel
