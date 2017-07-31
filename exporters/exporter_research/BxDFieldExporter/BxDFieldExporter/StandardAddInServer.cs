@@ -1124,7 +1124,7 @@ Checking “Dynamic” enables an object to be moved in the simulator. For example, 
                             {
                                 if (ucs.Name.Equals(node.BrowserNodeDefinition.Label))// is the fieldDataComponent is from that browsernode then run
                                 {
-                                    coorForm.readData(ucs);
+                                    coorForm.ReadData(ucs);
                                     coorForm.Show();
                                 }
                             }
@@ -1135,7 +1135,7 @@ Checking “Dynamic” enables an object to be moved in the simulator. For example, 
                 {
                     UserCoordinateSystem Choose = (UserCoordinateSystem)m_inventorApplication.CommandManager.Pick// have the user select a leaf occurrence or part
                                       (SelectionFilterEnum.kUserCoordinateSystemFilter, "Select a UCS to edit");
-                    coorForm.readData(Choose);
+                    coorForm.ReadData(Choose);
                     coorForm.Show();
                 }
             }
@@ -1202,7 +1202,7 @@ Checking “Dynamic” enables an object to be moved in the simulator. For example, 
         {
 
             //read from the temp save the proper field values
-            form.readFromData(selectedComponent);
+            form.ReadFromData(selectedComponent);
             //show a dialog for the user to enter in values
             form.ShowDialog();
         }

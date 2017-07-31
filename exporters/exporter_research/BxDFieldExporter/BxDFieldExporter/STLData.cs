@@ -17,7 +17,7 @@ namespace ExportProcess {
         public STLData() {
 
         }
-        public int getID() {
+        public int GetID() {
             try {
                 return ID;
             }
@@ -26,7 +26,7 @@ namespace ExportProcess {
                 return new int();
             }
         }
-        public byte[] getData() {
+        public byte[] GetData() {
             try
             {
                 List<byte> fullSTLData = new List<byte>();
@@ -46,7 +46,7 @@ namespace ExportProcess {
                 return null;
             }
         }
-        public float[,] getTranslationData() {
+        public float[,] GetTranslationData() {
             try {
                 return translationData;
             }

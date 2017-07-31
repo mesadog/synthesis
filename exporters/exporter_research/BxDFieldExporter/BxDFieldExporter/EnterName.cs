@@ -22,7 +22,7 @@ namespace BxDFieldExporter {
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void nameTextBox_TextChanged(object sender, EventArgs e) {
+        private void NameTextBox_TextChanged(object sender, EventArgs e) {
             if (nameTextBox.Text.Length > 0) {
                 okButton.Enabled = true;
             }

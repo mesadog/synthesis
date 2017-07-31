@@ -194,7 +194,7 @@ namespace ExportProcess
                             }
                             firstStl = false;
                         }
-                        byte[] stlBytes = ReadSTL(updatedFile).getData();
+                        byte[] stlBytes = ReadSTL(updatedFile).GetData();
                         foreach (byte stlSec in stlBytes)
                         {
                             bytesOfFiles.Add(stlSec);

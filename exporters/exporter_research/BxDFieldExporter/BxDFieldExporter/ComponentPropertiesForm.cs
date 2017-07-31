@@ -72,18 +72,18 @@ namespace BxDFieldExporter
         public void MassChanged(object sender, EventArgs e)
         {
 
-            field.Mass = (double)getMass();
+            field.Mass = (double)GetMass();
         }
         private void UpdateFrictionLabel()
         {
             frictionLabel.Text = "Friction:\n" + frictionTrackBar.Value + "/100";
             field.Friction = (double)frictionTrackBar.Value;
         }
-        private void frictionTrackBar_Scroll(object sender, EventArgs e)
+        private void FrictionTrackBar_Scroll(object sender, EventArgs e)
         {
             UpdateFrictionLabel();
         }
-        private void dynamicCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void DynamicCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (dynamicCheckBox.Checked)
             {
@@ -97,7 +97,7 @@ namespace BxDFieldExporter
                 field.Dynamic = false;
             }
         }
-        public void readFromData(FieldDataComponent d)
+        public void ReadFromData(FieldDataComponent d)
         {// reads from the data so user can see the same values from the last time they entered them
             try
             {
@@ -132,7 +132,7 @@ namespace BxDFieldExporter
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             if (comboBox1.Text == "kgs")
@@ -158,7 +158,7 @@ namespace BxDFieldExporter
             }
         }
 
-        private decimal getMass()
+        private decimal GetMass()
         {
             if (!massMode)
             {
