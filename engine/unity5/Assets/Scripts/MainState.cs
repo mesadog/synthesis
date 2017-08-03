@@ -313,6 +313,7 @@ public class MainState : SimState
         //Attached to main frame and face the back
         robotCamera.AddCamera(robotObject.transform.GetChild(0).transform, robotCameraPosition3, robotCameraRotation3);
 
+        
         robotCameraObject.SetActive(true);
 
 

@@ -6,6 +6,7 @@ using System.Text;
 using UnityEngine;
 using BulletUnity;
 using BulletSharp;
+using Assets.Scripts.FSM;
 
 /// <summary>
 /// Ultrasonic sensor class, must be attached to a node gameobject
@@ -14,14 +15,18 @@ public class UltraSensor : SensorBase
 {
 
     private float ultraAngle; //angle in degrees of the sensor's range
-    private float maxRange; //maximmum range of the sensor
+    public float maxRange = 10; //maximmum range of the sensor
     private UnityEngine.Vector3 offset = Vector3.zero; //offset from node in world coordinates
     private UnityEngine.Vector3 rotation = Vector3.forward; //rotation difference from the node rotation
+    private GameObject addSensorButton;
+    MainState main;
+    GameObject canvas;
+    GameObject robot;
 
     //Initialization
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -42,7 +47,7 @@ public class UltraSensor : SensorBase
         //var as the type (lambda function)
         //these variables can only live INSIDE a function. 
         Debug.DrawRay(transform.position + offset, transform.rotation * Vector3.forward + rotation, Color.green);
-
+        Debug.Log(ReturnOutput());
     }
 
     //Step #2
@@ -92,7 +97,7 @@ public class UltraSensor : SensorBase
 
                 if (distanceToCollider < shortestDistance)
                 {
-                    distanceToCollider = shortestDistance;
+                    shortestDistance = distanceToCollider;
                 }
             }
         }
@@ -109,5 +114,10 @@ public class UltraSensor : SensorBase
         }
 
         return shortestDistance;
+    }
+
+    public void AddUltraSensor()
+    {
+        robot = GameObject.Find("Robot");
     }
 }
