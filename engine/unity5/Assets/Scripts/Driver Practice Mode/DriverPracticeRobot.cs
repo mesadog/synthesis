@@ -68,6 +68,7 @@ public class DriverPracticeRobot : MonoBehaviour
     public int settingSpawn = 0; //0 if not, 1 if editing primary, and 2 if editing secondary
     private DynamicCamera.CameraState lastCameraState;
 
+    public int controlIndex = 0;
 
     /// <summary>
     /// If configuration file exists, loads information and auto-configures robot.
@@ -77,7 +78,7 @@ public class DriverPracticeRobot : MonoBehaviour
     /// 
     /// *NOTE: Because gamepiece identification in the new field format doesn't exist yet, we are using a predetermined gamepiece list. This must be changed as soon as support for gamepieces is added in the field exporter.*
     /// </summary>
-    public void Initialize(string robotDirectory)
+    public void Initialize(string robotDirectory, int ctrlIndex)
     {
         //Initializes all the configurable values and assigns them a default value.
         positionOffset = new UnityEngine.Vector3[2];
@@ -152,6 +153,8 @@ public class DriverPracticeRobot : MonoBehaviour
         displayTrajectories = new List<bool>();
         displayTrajectories.Add(false);
         displayTrajectories.Add(false);
+
+        controlIndex = ctrlIndex;
 
         Load(robotDirectory);
     }
@@ -857,16 +860,16 @@ public class DriverPracticeRobot : MonoBehaviour
     {
         if (processingIndex == 0)
         {
-            if ((InputControl.GetButton(Controls.buttons[0].pickupPrimary)))
+            if ((InputControl.GetButton(Controls.buttons[controlIndex].pickupPrimary)))
             {
 
                 Intake(0);
             }
-            if ((InputControl.GetButton(Controls.buttons[0].pickupSecondary)))
+            if ((InputControl.GetButton(Controls.buttons[controlIndex].pickupSecondary)))
             {
                 Intake(1);
             }
-            if ((InputControl.GetButtonDown(Controls.buttons[0].releasePrimary)))
+            if ((InputControl.GetButtonDown(Controls.buttons[controlIndex].releasePrimary)))
             {
                 ReleaseGamepiece(0);
             }
@@ -874,7 +877,7 @@ public class DriverPracticeRobot : MonoBehaviour
             {
                 HoldGamepiece(0);
             }
-            if ((InputControl.GetButtonDown(Controls.buttons[0].releaseSecondary)))
+            if ((InputControl.GetButtonDown(Controls.buttons[controlIndex].releaseSecondary)))
             {
                 ReleaseGamepiece(1);
             }
@@ -886,16 +889,16 @@ public class DriverPracticeRobot : MonoBehaviour
         }
         else
         {
-            if ((InputControl.GetButton(Controls.buttons[0].pickupSecondary)))
+            if ((InputControl.GetButton(Controls.buttons[controlIndex].pickupSecondary)))
             {
 
                 Intake(1);
             }
-            if ((InputControl.GetButton(Controls.buttons[0].pickupPrimary)))
+            if ((InputControl.GetButton(Controls.buttons[controlIndex].pickupPrimary)))
             {
                 Intake(0);
             }
-            if ((InputControl.GetButtonDown(Controls.buttons[0].releaseSecondary)))
+            if ((InputControl.GetButtonDown(Controls.buttons[controlIndex].releaseSecondary)))
             {
                 ReleaseGamepiece(1);
             }
@@ -903,7 +906,7 @@ public class DriverPracticeRobot : MonoBehaviour
             {
                 HoldGamepiece(1);
             }   
-            if ((InputControl.GetButtonDown(Controls.buttons[0].releasePrimary)))
+            if ((InputControl.GetButtonDown(Controls.buttons[controlIndex].releasePrimary)))
             {
                 ReleaseGamepiece(0);
             }
@@ -914,7 +917,7 @@ public class DriverPracticeRobot : MonoBehaviour
             processingIndex = 0;
         }
 
-        if ((InputControl.GetButtonDown(Controls.buttons[0].spawnPrimary))) SpawnGamepiece(0);
-        if ((InputControl.GetButtonDown(Controls.buttons[0].spawnPrimary))) SpawnGamepiece(1);
+        if ((InputControl.GetButtonDown(Controls.buttons[controlIndex].spawnPrimary))) SpawnGamepiece(0);
+        if ((InputControl.GetButtonDown(Controls.buttons[controlIndex].spawnPrimary))) SpawnGamepiece(1);
     }
 }
