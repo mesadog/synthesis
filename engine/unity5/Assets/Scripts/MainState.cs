@@ -130,8 +130,7 @@ public class MainState : SimState
             LoadReplay(selectedReplay);
         }
 
-        dynamicCameraObject = GameObject.Find("Main Camera");
-        dynamicCamera = dynamicCameraObject.AddComponent<DynamicCamera>();
+        //dynamicCamera = dynamicCameraObject.AddComponent<DynamicCamera>();
 
         DynamicCamera.MovingEnabled = true;
     }
@@ -303,6 +302,9 @@ public class MainState : SimState
             robotCameraObject = GameObject.Find("RobotCameraList");
             robotCamera = robotCameraObject.GetComponent<RobotCamera>();
         }
+
+        GameObject sensorManager = GameObject.Find("RobotSensorManager");
+        sensorManager.GetComponent<SensorManager>().AddUltrasonicSensor(robotObject.transform.GetChild(0).gameObject, new Vector3(0, 0, 0), new Vector3(0, 0, 0));
 
         robotCamera.RemoveCameras();
         //The camera data should be read here as a foreach loop and included in robot file

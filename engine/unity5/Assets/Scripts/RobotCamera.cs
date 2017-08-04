@@ -163,12 +163,17 @@ public class RobotCamera : MonoBehaviour
         if (main == null)
         {
             main = GameObject.Find("StateMachine").GetComponent<StateMachine>().CurrentState as MainState;
-        }else if(dynamicCamera == null){
+        }
+        else if(dynamicCamera == null && main.dynamicCameraObject != null){
             dynamicCamera = main.dynamicCameraObject.GetComponent<DynamicCamera>();
         }
-        else
+        else if(main != null && dynamicCamera != null)
         {
             UpdateCameraWindow();
+            UpdateCameraPosition();
+            UpdateCameraAnglePanel();
+            UpdateCameraFOVPanel();
+            UpdateNodeAttachment();
         }
         if (CameraIndicator.activeSelf)
         {
@@ -189,10 +194,7 @@ public class RobotCamera : MonoBehaviour
             }
         }
 
-        UpdateCameraPosition();
-        UpdateCameraAnglePanel();
-        UpdateCameraFOVPanel();
-        UpdateNodeAttachment();
+
     }
 
 
