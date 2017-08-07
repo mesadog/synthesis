@@ -156,17 +156,19 @@ public class DriverPracticeMode : MonoBehaviour {
             releaseMechanismText.text = "Current Part:  " + dpmRobot.releaseNode[configuringIndex].name;
             intakeMechanismText.text = "Current Part:  " + dpmRobot.intakeNode[configuringIndex].name;
 
+            int activeIndex = mainState.SpawnedRobots.IndexOf(mainState.activeRobot);
+
             if (configuringIndex == 0)
             {
-                intakeControlText.text = InputControl.GetButton(Controls.buttons[0].pickupPrimary).ToString();
-                releaseControlText.text = InputControl.GetButton(Controls.buttons[0].releasePrimary).ToString();
-                spawnControlText.text = InputControl.GetButton(Controls.buttons[0].spawnPrimary).ToString();
+                intakeControlText.text = Controls.buttons[activeIndex].pickupPrimary.primaryInput.ToString();
+                releaseControlText.text = Controls.buttons[activeIndex].releasePrimary.primaryInput.ToString();
+                spawnControlText.text = Controls.buttons[activeIndex].spawnPrimary.primaryInput.ToString();
             }
             else
             {
-                intakeControlText.text = InputControl.GetButton(Controls.buttons[0].pickupSecondary).ToString();
-                releaseControlText.text = InputControl.GetButton(Controls.buttons[0].releaseSecondary).ToString();
-                spawnControlText.text = InputControl.GetButton(Controls.buttons[0].spawnSecondary).ToString();
+                intakeControlText.text = Controls.buttons[activeIndex].pickupSecondary.primaryInput.ToString();
+                releaseControlText.text = Controls.buttons[activeIndex].releaseSecondary.primaryInput.ToString();
+                spawnControlText.text = Controls.buttons[activeIndex].spawnSecondary.primaryInput.ToString();
             }
         }
     }
@@ -231,11 +233,13 @@ public class DriverPracticeMode : MonoBehaviour {
     {
         if (configuring)
         {
+            
             if (dpmRobot.addingGamepiece)
             {
                 configWindow.SetActive(false);
                 dpmWindow.SetActive(false);
                 defineGamepieceWindow.SetActive(true);
+                Debug.Log("testworks");
             }
             else if (dpmRobot.settingSpawn != 0)
             {
@@ -551,26 +555,27 @@ public class DriverPracticeMode : MonoBehaviour {
             return;
         }
 
-        KeyMapping[] keys = GetComponentsInChildren<KeyMapping>();
+        int activeIndex = mainState.SpawnedRobots.IndexOf(mainState.activeRobot);
 
-        foreach (KeyMapping key in keys)
+        foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
         {
-            if (InputControl.GetButtonDown(key))
+            if (Input.GetKeyDown(vKey))
             {
                 if (configuringIndex == 0)
                 {
                     if (settingControl == 1)
                     {
-                        InputControl.GetButton(Controls.buttons[0].pickupPrimary);
+
+                        InputControl.setKey(Controls.buttons[activeIndex].pickupPrimary.name,vKey);
                     }
-                    else if (settingControl == 2) InputControl.GetButton(Controls.buttons[0].pickupPrimary);
-                    else InputControl.GetButton(Controls.buttons[0].spawnPrimary);
+                    else if (settingControl == 2) InputControl.setKey(Controls.buttons[activeIndex].releasePrimary.name,vKey);
+                    else InputControl.setKey(Controls.buttons[activeIndex].spawnPrimary.name,vKey);
                 }
                 else
                 {
-                    if (settingControl == 1) InputControl.GetButton(Controls.buttons[0].pickupSecondary);
-                    else if (settingControl == 2) InputControl.GetButton(Controls.buttons[0].releaseSecondary);
-                    else InputControl.GetButton(Controls.buttons[0].spawnPrimary);
+                    if (settingControl == 1) InputControl.setKey(Controls.buttons[activeIndex].pickupSecondary.name,vKey);
+                    else if (settingControl == 2) InputControl.setKey(Controls.buttons[activeIndex].releaseSecondary.name,vKey);
+                    else InputControl.setKey(Controls.buttons[activeIndex].spawnSecondary.name,vKey);
                 }
                 Controls.Save();
                 settingControl = 0;
@@ -583,7 +588,6 @@ public class DriverPracticeMode : MonoBehaviour {
     {
         if (configuring)
         {
-            CloseConfigurationWindow();
             CancelDefineGamepiece();
             CancelDefineIntake();
             CancelDefineRelease();

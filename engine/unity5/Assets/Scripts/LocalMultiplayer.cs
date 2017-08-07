@@ -174,4 +174,9 @@ public class LocalMultiplayer : MonoBehaviour {
     {
         GameObject.Find("MultiplayerTooltip").SetActive(false);
     }
+
+    public void EndProcesses()
+    {
+        multiplayerWindow.SetActive(false);
+    }
 }

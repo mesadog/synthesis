@@ -16,6 +16,7 @@ public class SimUI : MonoBehaviour
     DynamicCamera camera;
     Toolkit toolkit;
     DriverPracticeMode dpm;
+    LocalMultiplayer multiplayer;
 
     GameObject canvas;
 
@@ -74,6 +75,7 @@ public class SimUI : MonoBehaviour
 
             toolkit = GetComponent<Toolkit>();
             dpm = GetComponent<DriverPracticeMode>();
+            multiplayer = GetComponent<LocalMultiplayer>();
             FindElements();
         }
         else if (camera == null)
@@ -249,6 +251,8 @@ public class SimUI : MonoBehaviour
 
         dpm.EndProcesses();
         toolkit.EndProcesses();
+        multiplayer.EndProcesses();
+        
     }
     #endregion
     #region camera button functions
