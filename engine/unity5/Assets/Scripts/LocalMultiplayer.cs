@@ -21,6 +21,8 @@ public class LocalMultiplayer : MonoBehaviour {
     private int activeIndex = 0;
     private GameObject highlight;
 
+    private bool uiTextUpdated = false;
+
     /// <summary>
     /// FInds all the gameobjects and stores them in variables for efficiency
     /// </summary>
@@ -45,6 +47,14 @@ public class LocalMultiplayer : MonoBehaviour {
         if (mainState == null)
         {
             mainState = ((MainState)StateMachine.Instance.CurrentState);
+        }
+        else if (!uiTextUpdated)
+        {
+            if (mainState.activeRobot != null)
+            {
+                UpdateUI();
+                uiTextUpdated = true;
+            }
         }
     }
     
