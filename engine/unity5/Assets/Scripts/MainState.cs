@@ -122,6 +122,7 @@ public class MainState : SimState
         //initializes the dynamic camera
         dynamicCameraObject = GameObject.Find("Main Camera");
         dynamicCamera = dynamicCameraObject.AddComponent<DynamicCamera>();
+
         DynamicCamera.MovingEnabled = true;
     }
 
@@ -161,7 +162,7 @@ public class MainState : SimState
     public override void FixedUpdate()
     {
         //This line is essential for the reset to work accurately
-        robotCameraObject.transform.position = activeRobot.transform.GetChild(0).transform.position;
+        //robotCameraObject.transform.position = activeRobot.transform.GetChild(0).transform.position;
 
         UpdateTrackers();
 
@@ -225,23 +226,23 @@ public class MainState : SimState
             {
                 activeRobot = robot;
 
-                //Robot camera feature
-                if (robotCamera == null)
-                {
-                    robotCameraObject = GameObject.Find("RobotCameraList");
-                    robotCamera = robotCameraObject.GetComponent<RobotCamera>();
-                }
+                ////Robot camera feature
+                //if (robotCamera == null)
+                //{
+                //    robotCameraObject = GameObject.Find("RobotCameraList");
+                //    robotCamera = robotCameraObject.GetComponent<RobotCamera>();
+                //}
 
-                robotCamera.RemoveCameras();
-                //The camera data should be read here as a foreach loop and included in robot file
-                //Attached to main frame and face the front
-                robotCamera.AddCamera(robotObject.transform.GetChild(0).transform, robotCameraPosition, robotCameraRotation);
-                //Attached to the first node and face the front
-                robotCamera.AddCamera(robotObject.transform.GetChild(1).transform, robotCameraPosition2, robotCameraRotation2);
-                //Attached to main frame and face the back
-                robotCamera.AddCamera(robotObject.transform.GetChild(0).transform, robotCameraPosition3, robotCameraRotation3);
+                //robotCamera.RemoveCameras();
+                ////The camera data should be read here as a foreach loop and included in robot file
+                ////Attached to main frame and face the front
+                //robotCamera.AddCamera(robotObject.transform.GetChild(0).transform, robotCameraPosition, robotCameraRotation);
+                ////Attached to the first node and face the front
+                //robotCamera.AddCamera(robotObject.transform.GetChild(1).transform, robotCameraPosition2, robotCameraRotation2);
+                ////Attached to main frame and face the back
+                //robotCamera.AddCamera(robotObject.transform.GetChild(0).transform, robotCameraPosition3, robotCameraRotation3);
 
-                robotCameraObject.SetActive(true);
+                //robotCameraObject.SetActive(true);
             }
 
             robotObject.AddComponent<DriverPracticeRobot>().Initialize(directory, SpawnedRobots.Count);
@@ -269,6 +270,7 @@ public class MainState : SimState
     {
         if (SpawnedRobots.Count >= 1)
         {
+
             if (activeRobot != null)
             {
                 int index = SpawnedRobots.IndexOf(activeRobot);
@@ -285,7 +287,29 @@ public class MainState : SimState
             dynamicCamera.cameraState.robot = activeRobot.gameObject;
 
         }
+
+        robotCameraObject = GameObject.Find("RobotCameraList");
+        robotCamera = robotCameraObject.GetComponent<RobotCamera>();
+
+
+        //GameObject sensorManager = GameObject.Find("RobotSensorManager");
+        //sensorManager.GetComponent<SensorManager>().AddUltrasonicSensor(robotObject.transform.GetChild(0).gameObject, new Vector3(0, 0, 0), new Vector3(0, 0, 0));
+
+        //robotCamera.RemoveCameras();
+        ////The camera data should be read here as a foreach loop and included in robot file
+        ////Attached to main frame and face the front
+        //robotCamera.AddCamera(robotObject.transform.GetChild(0).transform, robotCameraPosition, robotCameraRotation);
+        ////Attached to the first node and face the front
+        //robotCamera.AddCamera(robotObject.transform.GetChild(1).transform, robotCameraPosition2, robotCameraRotation2);
+        ////Attached to main frame and face the back
+        //robotCamera.AddCamera(robotObject.transform.GetChild(0).transform, robotCameraPosition3, robotCameraRotation3);
+
+
+        //robotCameraObject.SetActive(true);
     }
+
+            
+
 
     /// <summary>
     /// Changes the active robot to a different robot based on a given index

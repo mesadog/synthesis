@@ -112,7 +112,7 @@ public class SimUI : MonoBehaviour
         freeroamCameraWindow = AuxFunctions.FindObject(canvas, "FreeroamPanel");
         spawnpointWindow = AuxFunctions.FindObject(canvas, "SpawnpointPanel");
 
-        
+        addRobotPanel = AuxFunctions.FindObject("MultiplayerPanel");
 
 
 
@@ -243,7 +243,6 @@ public class SimUI : MonoBehaviour
     {
         changeFieldPanel.SetActive(false);
         changeRobotPanel.SetActive(false);
-        addRobotPanel.SetActive(false);
         exitPanel.SetActive(false);
         CloseOrientWindow();
         main.IsResetting = false;   
